@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    height: 200vh;
+}
+
+::-webkit-scrollbar {
+    width: .75vw;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(138, 43, 226, 0.2);
+    border-radius: 10px;
+}
+
+.burger-menu {
+    display: none;
+}
+
+.burger-menu-button p {
+    cursor: pointer;
+    font-size: 40px;
+    height: 40px;
+    width: 40px;
+    color: rgba(138, 43, 226, 1);
+}
+
+.search-container {
+    display: none;
+}
+
+.search-container>span>p {
+    cursor: pointer;
+    color: rgba(138, 43, 226, 1);
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+}
+
+.active {
+    color: rgba(138, 43, 226, 1);
+}
+
+.nav-link {
+    transition: all .2s linear;
+}
+
+.nav-link:hover {
+    transition: all .2s linear;
+    color: rgba(138, 43, 226, 1);
+}
+
+@media(max-width:1080px) {
+    header {
+        width: 100vw;
+        height: 80px;
+    }
+
+    .input-box input {
+        display: none;
+    }
+
+    .right-container div a {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+        margin-left: 35%;
+    }
+
+    .search-container {
+        display: block;
+    }
+
+}
+
+@media(max-width:480px) {
+    header {
+        width: 100vw;
+        height: 80px;
+    }
+}
