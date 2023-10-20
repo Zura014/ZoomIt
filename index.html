@@ -15,21 +15,18 @@
 
 <body>
 
-    <header class="header-component w-full h-25 bg-gray-200 relative mx-auto px-20">
+    <header class="w-full h-25 bg-gray-200 relative mx-auto px-20">
 
-        <nav class="navbar-container flex justify-between items-center p-2">
+        <nav class="flex justify-between items-center p-2 w-full">
             <div class="left-container flex justify-around" style="flex-basis: 40%;">
-                <div class="img-box flex items-center">
-                    <img src="assets/logo.png" alt="" class="h-16 w-18">
+                <div class="img-box flex items-center" id="imageBox">
+                    <a href="">
+                        <img src="assets/logo.png" alt="" class="h-16 w-18">
+                    </a>
                 </div>
                 <div class="input-box flex items-center">
                     <input type="text" class="w-64 h-14 p-3 outline-none" placeholder="ძებნა...">
                 </div>
-            </div>
-            <div class="search-container">
-                <span class="material-symbols-outlined">
-                    <p>search</p>
-                </span>
             </div>
             <div class="right-container flex justify-between gap-5 items-center" style="flex-basis: auto;">
                 <div class="nav-links flex justify-between gap-5 text-sm">
@@ -41,11 +38,25 @@
                     <a href="#" class="p-4 bg-purple-700 text-white delay-200">რეგისტრაცია</a>
                     <a href="#" class="p-4 bg-purple-700 text-white delay-200">შესვლა</a>
                 </div>
-                <div class="burger-menu">
-                    <span class="material-symbols-outlined burger-menu-button">
-                        <p>menu</p>
-                    </span>
+                <!-- Responsive-->
+                <div class="flex justify-between hidden">
+                    <div class="img-box flex items-center">
+                        <img src="assets/logo.png" alt="" class="h-16 w-18">
+                    </div>
+                    <div class="search-container">
+                        <span class="material-symbols-outlined" id="searchButton">
+                            <p>search</p>
+                        </span>
+                        <input type="text" placeholder="ძებნა..." id="searchInputH"
+                            class="relative w-64 h-14 p-3 outline-none top-10 hidden" />
+                    </div>
+                    <div class="burger-menu">
+                        <span class="material-symbols-outlined burger-menu-button">
+                            <p>menu</p>
+                        </span>
+                    </div>
                 </div>
+
             </div>
         </nav>
 
