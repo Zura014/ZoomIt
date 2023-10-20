@@ -17,7 +17,7 @@ body {
 }
 
 .burger-menu {
-    display: hidden;
+    display: none;
 }
 
 .burger-menu-button p {
@@ -29,7 +29,7 @@ body {
 }
 
 .search-container {
-    display: hidden;
+    display: none;
 }
 
 .search-container>span>p {
@@ -53,6 +53,21 @@ body {
     color: rgba(138, 43, 226, 1);
 }
 
+.responsive-header{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 @media(max-width:1080px) {
     header {
         width: 100vw;
@@ -60,22 +75,35 @@ body {
     }
 
     .input-box input {
-        display: hidden;
+        display: none;
     }
 
     .right-container div a {
-        display: hidden;
+        display: none;
     }
 
     .burger-menu {
         display: block;
-        margin-left: 35%;
     }
 
     .search-container {
         display: block;
     }
 
+    .img-box >a > img {
+        display: none;
+    }
+
+    .responsive-header{
+        display: flex;
+        
+        z-index: 10;
+        position:relative;
+        width: 50vw;
+        margin: 0 500px;
+        
+    }
+    
 
 }
 

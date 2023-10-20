@@ -10,7 +10,6 @@
     <link rel="shortcut icon" href="/assets/logo.png" type="image/x-icon">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
 </head>
 
 <body>
@@ -19,9 +18,9 @@
 
         <nav class="flex justify-between items-center p-2 w-full">
             <div class="left-container flex justify-around" style="flex-basis: 40%;">
-                <div class="img-box flex items-center" id="imageBox">
+                <div class="img-box flex items-center">
                     <a href="">
-                        <img src="assets/logo.png" alt="" class="h-16 w-18">
+                        <img src="assets/logo.png" class="h-16 w-18 img1">
                     </a>
                 </div>
                 <div class="input-box flex items-center">
@@ -38,8 +37,10 @@
                     <a href="#" class="p-4 bg-purple-700 text-white delay-200">რეგისტრაცია</a>
                     <a href="#" class="p-4 bg-purple-700 text-white delay-200">შესვლა</a>
                 </div>
+
+
                 <!-- Responsive-->
-                <div class="flex justify-between hidden">
+                <!-- <div class="responsive-header items-center justify-between">
                     <div class="img-box flex items-center">
                         <img src="assets/logo.png" alt="" class="h-16 w-18">
                     </div>
@@ -55,12 +56,38 @@
                             <p>menu</p>
                         </span>
                     </div>
-                </div>
+                </div> -->
 
             </div>
         </nav>
-
     </header>
+
+
+
+    <section class="filter">
+        <div class="w-full h-56 px-30 py-10 mx-auto">
+            <div class="mt-10 mb-5 w-full h-full">
+                <div class="flex row flex-wrap">
+                    <div>
+                        <select>
+                            <option value="0">მომსახურების ტიპები</option>
+                            <option value="school">სკოლა</option>
+                            <option value="proffesions">პროფესიები</option>
+                        </select>
+                    </div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
 
 
     <script src="script.js"></script>

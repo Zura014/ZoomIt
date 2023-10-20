@@ -538,13 +538,29 @@ video {
   position: relative;
 }
 
+.top-10 {
+  top: 2.5rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
 }
 
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .flex {
   display: flex;
+}
+
+.hidden {
+  display: none;
 }
 
 .h-14 {
@@ -555,12 +571,24 @@ video {
   height: 4rem;
 }
 
+.h-56 {
+  height: 14rem;
+}
+
+.h-full {
+  height: 100%;
+}
+
 .w-64 {
   width: 16rem;
 }
 
 .w-full {
   width: 100%;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .items-center {
@@ -606,6 +634,11 @@ video {
   padding-right: 5rem;
 }
 
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -621,40 +654,45 @@ video {
   outline-offset: 2px;
 }
 
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 .delay-200 {
   transition-delay: 200ms;
 }
 
-body{
+body {
   height: 200vh;
+  width: 100vw;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: .75vw;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background-color: rgba(138, 43, 226, 0.2);
   border-radius: 10px;
 }
 
-.burger-menu{
+.burger-menu {
   display: none;
 }
 
-.burger-menu-button p{
+.burger-menu-button p {
   cursor: pointer;
-  font-size:40px ;
+  font-size: 40px;
   height: 40px;
   width: 40px;
   color: rgba(138, 43, 226, 1);
 }
 
-.search-container{
+.search-container {
   display: none;
 }
 
-.search-container > span > p{
+.search-container>span>p {
   cursor: pointer;
   color: rgba(138, 43, 226, 1);
   width: 40px;
@@ -662,26 +700,30 @@ body{
   font-size: 40px;
 }
 
-.active{
+.active {
   color: rgba(138, 43, 226, 1);
 }
 
-.nav-link{
+.nav-link {
   transition: all .2s linear;
 }
 
-.nav-link:hover{
+.nav-link:hover {
   transition: all .2s linear;
   color: rgba(138, 43, 226, 1);
 }
 
-@media(max-width:1080px){
-  header{
+.responsive-header{
+  display: none;
+}
+
+@media(max-width:1080px) {
+  header {
     width: 100vw;
     height: 80px;
   }
 
-  .input-box input{
+  .input-box input {
     display: none;
   }
 
@@ -689,18 +731,29 @@ body{
     display: none;
   }
 
-  .burger-menu{
+  .burger-menu {
     display: block;
-    margin-left: 35%;
   }
 
-  .search-container{
+  .search-container {
     display: block;
+  }
+
+  .img-box >a > img {
+    display: none;
+  }
+
+  .responsive-header{
+    display: flex;
+    z-index: 10;
+    position:relative;
+    width: 50vw;
+    margin: 0 500px;
   }
 }
 
-@media(max-width:480px){
-  header{
+@media(max-width:480px) {
+  header {
     width: 100vw;
     height: 80px;
   }
