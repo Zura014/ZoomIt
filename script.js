@@ -1,10 +1,14 @@
-// let searchInputH = document.querySelector("#searchInputH");
-// let searchButton = document.querySelector("#searchButton");
-// searchButton.addEventListener("click", () => {
-//     if (searchInputH.classList.contains("hidden")){
-//         searchInputH.classList.remove("hidden");
-//     }else{
-//         searchInputH.classList.add("hidden");
-//     }
-// })
+ let burgerMenuButton = document.querySelector("#burgerMenuButton");
+ let burgerMenu = document.querySelector("#burgerMenu")
+ 
+ 
+ burgerMenuButton.addEventListener("click", () => {
+     if (burgerMenuButton.classList.contains("open")){
+         burgerMenuButton.classList.remove("open");
+         burgerMenu.classList.add("hidden");
+     }else{
+         burgerMenuButton.classList.add("open");
+         burgerMenu.classList.remove("hidden");
+     }
+ })
 
