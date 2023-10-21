@@ -14,81 +14,31 @@
 
 <body>
 
-    <header class="w-full h-25 bg-gray-200 relative mx-auto px-20">
-
-        <nav class="flex justify-between items-center p-2 w-full">
-            <div class="left-container flex justify-around" style="flex-basis: 40%;">
-                <div class="img-box flex items-center">
-                    <a href="">
-                        <img src="assets/logo.png" class="h-16 w-18 img1">
-                    </a>
-                </div>
-                <div class="input-box flex items-center">
-                    <input type="text" class="w-64 h-14 p-3 outline-none" placeholder="ძებნა...">
-                </div>
+    <!-- Navbar -->
+    <header class="relative container mx-auto p-6 bg-red-100">
+        <nav class="flex items-center justify-between">
+            <!-- Image and Input -->
+            <div class="flex justify-between items-center space-x-12">
+                <img src="/assets/logo.png" class="w-18 h-16">
+                <input type="text" placeholder="ძებნა..." class="pl-5 hidden w-64 h-14 p-3 outline-none md:block">
             </div>
-            <div class="right-container flex justify-between gap-5 items-center" style="flex-basis: auto;">
-                <div class="nav-links flex justify-between gap-5 text-sm">
-                    <a href="#" class="nav-link active">მთავარი</a>
-                    <a href="#" class="nav-link">კატეგორიები</a>
-                    <a href="#" class="nav-link">გვერდები</a>
-                </div>
-                <div class="buttons flex justify-between gap-5">
-                    <a href="#" class="p-4 bg-purple-700 text-white delay-200">რეგისტრაცია</a>
-                    <a href="#" class="p-4 bg-purple-700 text-white delay-200">შესვლა</a>
-                </div>
+            <div class="flex items-center justify-between space-x-12">
 
-
-                <!-- Responsive-->
-                <!-- <div class="responsive-header items-center justify-between">
-                    <div class="img-box flex items-center">
-                        <img src="assets/logo.png" alt="" class="h-16 w-18">
-                    </div>
-                    <div class="search-container">
-                        <span class="material-symbols-outlined" id="searchButton">
-                            <p>search</p>
-                        </span>
-                        <input type="text" placeholder="ძებნა..." id="searchInputH"
-                            class="relative w-64 h-14 p-3 outline-none top-10 hidden" />
-                    </div>
-                    <div class="burger-menu">
-                        <span class="material-symbols-outlined burger-menu-button">
-                            <p>menu</p>
-                        </span>
-                    </div>
-                </div> -->
+                
+            <div class="hidden space-x-6 md:flex">
+                <a href="#" class="page-link active">მთავარი</a>
+                <a href="#" class="page-link">კატეგორიები</a>
+                <a href="#" class="page-link">გვერდები</a>
+            </div>
+            <div class="hidden justify-between space-x-6 md:flex">
+                <a href="#" class="px-7 py-5 bg-purple-800 text-white">რეგისტრაცია</a>
+                <a href="#" class="px-7 py-5 bg-purple-800 text-white">შესვლა</a>
+            </div>
 
             </div>
+
         </nav>
     </header>
-
-
-
-    <section class="filter">
-        <div class="w-full h-56 px-30 py-10 mx-auto">
-            <div class="mt-10 mb-5 w-full h-full">
-                <div class="flex row flex-wrap">
-                    <div>
-                        <select>
-                            <option value="0">მომსახურების ტიპები</option>
-                            <option value="school">სკოლა</option>
-                            <option value="proffesions">პროფესიები</option>
-                        </select>
-                    </div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
 
     <script src="script.js"></script>
     <script>
