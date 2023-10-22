@@ -12,7 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
-<body>
+<body class="bg-bodyColor">
 
     <!-- Navbar -->
     <header class="relative container mx-auto p-3 bg-transparent w-full">
@@ -32,14 +32,36 @@
 
             <div class="hidden items-center justify-between space-x-8 lg:flex">
 
-                <div class="hidden space-x-6 lg:flex">
-                    <a href="#" class="page-link active">მთავარი</a>
-                    <a href="#" class="page-link">კატეგორიები</a>
-                    <a href="#" class="page-link">გვერდები &darr;</a>
+                <div class="hidden space-x-6 lg:flex text-titleColor">
+                    <a href="#" class="page-link active hover:text-activeColor">მთავარი</a>
+                    <a href="#" class="page-link hover:text-activeColor">კატეგორიები</a>
+                    <a href="#" class="page-link hover:text-activeColor" id="pagesButton">გვერდები &darr;</a>
                 </div>
+
+                <div
+                    id="pagesMenu"
+                    class="hidden gap-0 absolute w-64 h-auto py-2 px-7 bg-white text-sm font-semibold top-24 right-56 flex flex-col space-y-6 items-start justify-center text-titleColor drop-shadow-md">
+                    <div class="border-b border-gray-200 py-2 w-full">
+                        <a href="#">ჩვენს შესახებ</a>
+                    </div>
+                    <div class="border-b border-gray-200 py-2 w-full">
+                        <a href="#">კითხვები & პასუხები</a>
+
+                    </div>
+                    <div class="border-b border-gray-200 py-2 w-full">
+                        <a href="#">წესები და პირობები</a>
+
+                    </div>
+                    <div class="py-2 w-full">
+                        <a href="#">კონფიდენციალურობა</a>
+
+                    </div>
+                </div>
+
+
                 <div class="hidden justify-between space-x-6 lg:flex">
-                    <a href="#" class="px-7 py-4 text-lg bg-purple-800 text-white">რეგისტრაცია</a>
-                    <a href="#" class="px-7 py-4 text-lg bg-purple-800 text-white">შესვლა</a>
+                    <a href="#" class="px-7 py-4 text-lg bg-buttonColor text-white">რეგისტრაცია</a>
+                    <a href="#" class="px-7 py-4 text-lg bg-buttonColor text-white">შესვლა</a>
                 </div>
             </div>
 
@@ -53,7 +75,7 @@
                 <!--Menu-->
                 <div class="lg:hidden">
                     <div id="burgerMenu"
-                        class="absolute h-48 flex flex-col items-center self-end hidden py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shaddow-md">
+                        class="absolute h-48 flex flex-col items-center self-end hidden py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
                         <a href="#" class="page-link active border-b-2 border-violet-700 border-solid">მთავარი</a>
                         <a href="#" class="page-link border-b-2 border-violet-700 border-solid">კატეგორიები</a>
                         <a href="#" class="page-link border-b-2 border-violet-700 border-solid">გვერდები</a>
@@ -65,28 +87,70 @@
     </header>
 
     <!-- Filtration -->
-    <section class="mt-12 mx-44">
-        <div class="grid justify-items-center grid-cols-3 px-auto gap-4">
-            <div class="w-24 h-32 bg-purple-800"></div>
-            <div class="w-24 h-32 bg-violet-800"></div>
-            <div class="w-24 h-32 bg-red-800"></div>
-            <div class="w-24 h-32 bg-blue-800 grid grid-cols-2">
-                <div class="w-12 h-32 bg-orange-800"></div>
-                <div class="w-12 h-32 bg-gray-800"></div>
+    <section class="mt-20 mx-auto sm:mx-12 md:mx-24 lg:mx-44 xl:mx-80">
+        <div class="grid justify-items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 px-auto gap-6 ">
+            <div class="w-full h-16 flex justify-center items-center">
+                <select class="w-full h-full border-gray-500 rounded border-solid border text-xl px-2 text-gray-500">
+                    <option value="0" disabled selected hidden>მომსახურების ტიპი</option>
+                    <option value="school">სკოლა</option>
+                    <option value="proffesions">პროფესიები</option>
+                </select>
             </div>
-            <div class="w-24 h-32 bg-red-200"></div>
-            <div class="w-24 h-32 bg-orange-200"></div>
+            <div class="w-full h-16">
+                <div class="w-full h-full flex justify-center items-center">
+                    <select class="w-full h-full border-gray-500 rounded border-solid border text-xl px-2 text-gray-500">
+                        <option value="0" disabled selected hidden>აირჩიე კატეგორია</option>
+                        <option value="fiveToTwelveClass">V-XII კლასი</option>
+                        <option value="oneToFourClass">I-IV კლასი</option>
+                    </select>
+                </div>
+            </div>
+            <div class="w-full h-16">
+                <div class="w-full h-16 flex justify-center items-center">
+                    <select class="w-full h-full border-gray-500 rounded border-solid border text-xl px-2 text-gray-500">
+                        <option value="0" disabled selected hidden>რეიტინგი</option>
+                        <option value="rateing">რეიტინგი</option>
+                        <option value="quantity">რაოდენობა</option>
+                    </select>
+                </div>
+            </div>
+            <div class="w-full h-16 grid grid-cols-2 gap-4">
+                <div class="w-half h-16">
+                    <div class="w-full h-16 flex justify-center items-center">
+                        <input tpye="number" class="w-full h-full border-gray-500 rounded border-solid outline-none border text-lg px-4 text-gray-500" placeholder="5₾-დან">
+                    </div>
+                </div>
+                <div class="w-half h-16">
+                    <div class="w-full h-16 flex justify-center items-center">
+                        <input type="number" class="w-full h-full border-gray-500 rounded border-solid outline-none border text-lg px-4 text-gray-500" placeholder="500₾-მდე">
+                    </div>
+                </div>
+            </div>
+            <div class="w-full h-16">
+                <div class="w-full h-16 flex justify-center items-center">
+                    <input type="date" placeholder="22/10/2023 - 29/10/2023" class="outline-none w-full h-full border-gray-500 rounded border-solid border text-xl px-4 text-gray-500">
+                </div>
+            </div>
+            <div class="w-full h-16">
+                <div class="w-full h-full flex justify-center items-start">
+                    <button class="w-full h-14 border-gray-500 border-solid bg-buttonColor text-md font-medium px-2 text-white">
+                        ძებნა
+                    </button>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="mt-12 mx-auto sm:mx-12 md:mx-24 lg:mx-44">
+    <section class="mt-12 mx-auto sm:mx-12 md:mx-24 lg:mx-44 xl:mx-80">
         <div class="mx-auto px-3">
             <!-- header text -->
             <div class="flex flex-col items-start mb-11 w-full xl:w-1/2">
 
-                <h2 class="text-xl font-bold text-titleColor tracking-tight md:text-3xl">აირჩიეთ თქვენთვის სასურველი ZOOM ჩართვა
+                <h2 class="text-xl font-bold text-titleColor tracking-tight md:text-3xl">აირჩიეთ თქვენთვის სასურველი
+                    ZOOM ჩართვა
                 </h2>
-                <a href="#" class="text-1g font-bold flex items-center md:font-semibold md:text-2xl tracking-tight text-titleColor">
+                <a href="#"
+                    class="text-1g font-bold flex items-center md:font-semibold md:text-2xl tracking-tight text-titleColor">
                     <h3>როგორ დავჯავშნოთ</h3><img src="/assets/icons8-zoom-48.png" class="w-10 h-10">
                 </a>
             </div>
