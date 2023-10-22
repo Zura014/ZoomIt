@@ -591,6 +591,11 @@ video {
   margin-right: auto;
 }
 
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
 .mb-11 {
   margin-bottom: 2.75rem;
 }
@@ -613,6 +618,10 @@ video {
 
 .mt-20 {
   margin-top: 5rem;
+}
+
+.mt-28 {
+  margin-top: 7rem;
 }
 
 .flex {
@@ -1026,6 +1035,11 @@ body {
     margin-right: 3rem;
   }
 
+  .sm\:mx-2 {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
   .sm\:w-auto {
     width: auto;
   }
@@ -1099,5 +1113,9 @@ body {
 
   .xl\:w-64 {
     width: 16rem;
+  }
+
+  .xl\:w-full {
+    width: 100%;
   }
 }
