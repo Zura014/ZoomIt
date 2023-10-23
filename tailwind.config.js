@@ -11,7 +11,8 @@ module.exports = {
     extend: {
       colors: {
         bodyColor: '#f5f5f5',
-        mainColor: 'rgba(138, 43, 226, 1)',
+        categoriesColor: '#dabfe1',
+        categoriesSvgColor: '#bcd9e4',
         titleColor: '#21225f',
         activeColor: '#8a2be2',
         buttonColor: '#8000a3',
