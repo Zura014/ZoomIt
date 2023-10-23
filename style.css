@@ -2,16 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wdth@62.5;100&display=swap');
 
-*{
-  font-family: 'Noto Sans Georgian', sans-serif;
-}
-
-body {
+  body {
   height: 200vh;
   width: 100%;
+  font-family: 'Noto Sans Georgian', sans-serif;
 }
 
 ::-webkit-scrollbar {
