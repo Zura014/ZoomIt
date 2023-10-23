@@ -17,6 +17,9 @@ module.exports = {
         activeColor: '#8a2be2',
         buttonColor: '#8000a3',
       },
+      fontFamily: {
+        roboto: ['Noto Sans Georgian', 'sans-serif'],
+      },
     },
   },
   plugins: [],
