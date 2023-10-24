@@ -8,6 +8,16 @@ module.exports = {
       lg: '1024px',
       xl: '1280px'
     },
+    width:{
+      78: '300px',
+      2324:'100%',
+      82:'324px'
+    },
+    height:{
+      505: '505px',
+      2334:'100%',
+      82:'324px'
+    },
     extend: {
       colors: {
         bodyColor: '#f5f5f5',
