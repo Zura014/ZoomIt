@@ -26,6 +26,7 @@ module.exports = {
         titleColor: '#21225f',
         activeColor: '#8a2be2',
         buttonColor: '#8000a3',
+        subjectColor: '#08a9e61a'
       },
       fontFamily: {
         roboto: ['Noto Sans Georgian', 'sans-serif'],
