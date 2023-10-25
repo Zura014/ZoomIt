@@ -13,12 +13,14 @@ module.exports = {
       2324: "100%",
       82: "324px",
       84: "84px",
+      296: "296px"
     },
     height: {
       505: "505px",
       2334: "100%",
       82: "324px",
       68: "68px",
+      
     },
     extend: {
       colors: {
@@ -30,6 +32,7 @@ module.exports = {
         buttonColor: "#8000a3",
         subjectColor: "#08a9e61a",
         borderColor: "rgba(255, 255, 255, .1)",
+        messengerIconColor: "#0A7CFF"
       },
       fontFamily: {
         roboto: ["Noto Sans Georgian", "sans-serif"],
