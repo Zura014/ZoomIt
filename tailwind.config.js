@@ -11,12 +11,14 @@ module.exports = {
     width:{
       78: '300px',
       2324:'100%',
-      82:'324px'
+      82:'324px',
+      84: '84px'
     },
     height:{
       505: '505px',
       2334:'100%',
-      82:'324px'
+      82:'324px',
+      68:'68px'
     },
     extend: {
       colors: {
@@ -26,7 +28,8 @@ module.exports = {
         titleColor: '#21225f',
         activeColor: '#8a2be2',
         buttonColor: '#8000a3',
-        subjectColor: '#08a9e61a'
+        subjectColor: '#08a9e61a',
+        borderColor: 'rgba(255, 255, 255, .1)',
       },
       fontFamily: {
         roboto: ['Noto Sans Georgian', 'sans-serif'],
