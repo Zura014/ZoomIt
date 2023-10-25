@@ -574,36 +574,40 @@ video {
   position: relative;
 }
 
+.bottom-6 {
+  bottom: 1.5rem;
+}
+
 .left-6 {
   left: 1.5rem;
 }
 
-.right-56 {
-  right: 14rem;
+.right-0 {
+  right: 0px;
+}
+
+.right-5 {
+  right: 1.25rem;
 }
 
 .right-6 {
   right: 1.5rem;
 }
 
+.right-72 {
+  right: 18rem;
+}
+
+.top-16 {
+  top: 4rem;
+}
+
+.top-20 {
+  top: 5rem;
+}
+
 .top-24 {
   top: 6rem;
-}
-
-.bottom-4 {
-  bottom: 1rem;
-}
-
-.right-4 {
-  right: 1rem;
-}
-
-.bottom-6 {
-  bottom: 1.5rem;
-}
-
-.right-5 {
-  right: 1.25rem;
 }
 
 .mx-9 {
@@ -636,6 +640,10 @@ video {
   margin-bottom: 2rem;
 }
 
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
 .mr-2 {
   margin-right: 0.5rem;
 }
@@ -656,12 +664,8 @@ video {
   margin-top: 7rem;
 }
 
-.ml-2 {
-  margin-left: 0.5rem;
-}
-
-.ml-4 {
-  margin-left: 1rem;
+.block {
+  display: block;
 }
 
 .flex {
@@ -695,6 +699,16 @@ video {
 
 .w-84 {
   width: 84px;
+}
+
+.origin-top {
+  transform-origin: top;
+}
+
+.scale-0 {
+  --tw-scale-x: 0;
+  --tw-scale-y: 0;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .cursor-pointer {
@@ -874,6 +888,10 @@ video {
   border-radius: 9999px;
 }
 
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
 .border {
   border-width: 1px;
 }
@@ -947,6 +965,11 @@ video {
   background-color: rgb(188 217 228 / var(--tw-bg-opacity));
 }
 
+.bg-messengerIconColor {
+  --tw-bg-opacity: 1;
+  background-color: rgb(10 124 255 / var(--tw-bg-opacity));
+}
+
 .bg-subjectColor {
   background-color: #08a9e61a;
 }
@@ -963,11 +986,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-messengerIconColor {
-  --tw-bg-opacity: 1;
-  background-color: rgb(10 124 255 / var(--tw-bg-opacity));
 }
 
 .object-cover {
@@ -989,6 +1007,11 @@ video {
 
 .p-3 {
   padding: 0.75rem;
+}
+
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 .px-2 {
@@ -1064,6 +1087,10 @@ video {
 
 .pl-12 {
   padding-left: 3rem;
+}
+
+.pl-2 {
+  padding-left: 0.5rem;
 }
 
 .pl-5 {
@@ -1193,12 +1220,20 @@ video {
   transition-duration: 200ms;
 }
 
+.duration-300 {
+  transition-duration: 300ms;
+}
+
 .duration-500 {
   transition-duration: 500ms;
 }
 
 .duration-700 {
   transition-duration: 700ms;
+}
+
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -1298,6 +1333,14 @@ body {
   transform: translate(-20px, 8px)
 }
 
+#input-itself:focus{
+  color: #212529;
+  background-color: #fff;
+  border-color: #86b7fe;
+  outline: none;
+  box-shadow: 0 0 0 0.25rem #0d6efd40;
+}
+
 .hover\:-translate-y-3:hover {
   --tw-translate-y: -0.75rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1350,9 +1393,28 @@ body {
   transition-duration: 700ms;
 }
 
+.focus\:border-blue-700:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(29 78 216 / var(--tw-border-opacity));
+}
+
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.focus\:transition-all:focus {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.focus\:duration-500:focus {
+  transition-duration: 500ms;
+}
+
+.focus\:ease-in-out:focus {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media (min-width: 480px) {
@@ -1437,6 +1499,10 @@ body {
 
   .lg\:items-center {
     align-items: center;
+  }
+
+  .lg\:bg-transparent {
+    background-color: transparent;
   }
 
   .lg\:text-xl {

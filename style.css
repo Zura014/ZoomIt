@@ -100,3 +100,11 @@ body {
   position: absolute;
   transform: translate(-20px, 8px)
 }
+
+#input-itself:focus{
+   color: #212529;
+    background-color: #fff;
+    border-color: #86b7fe;
+    outline: none;
+    box-shadow: 0 0 0 0.25rem #0d6efd40;
+}

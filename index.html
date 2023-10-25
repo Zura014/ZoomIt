@@ -22,30 +22,49 @@
         <i class="fa-brands fa-facebook-messenger fa-xl" style="color: #ffffff;"></i>
     </div>
     <!-- Navbar -->
-    <header class="relative container mx-auto p-3 bg-transparent w-full">
+    <header class="relative container mx-auto p-3 bg-white lg:bg-transparent w-full">
         <nav class="flex items-center justify-between w-full">
             <!-- Image and Input -->
             <div class="flex justify-between items-center space-x-12">
+                <a href="">
                 <img src="/assets/logo.png" class="w-18 h-16" />
+                </a>
                 <input type="text" placeholder="ძებნა..."
                     class="pl-5 hidden xl:w-64 h-14 p-3 outline-none lg:block lg:w-40" />
             </div>
 
-            <div class="flex space-x-6 items-center lg:hidden">
-                <span class="text-4xl text-justify material-symbols-outlined">
+            <!-- Search -->
+            <!-- Search Button -->
+            <div id="searchMenuButton" 
+            class="flex space-x-6 items-center w-11 h-11 lg:hidden cursor-pointer">
+                <span class="text-4xl text-justify w-full h-full material-symbols-outlined">
                     search
                 </span>
             </div>
+
+            <!-- Search Menu -->
+            <div id="searchMenu"
+            class="origin-top scale-0 duration-300 absolute outline-none w-full h-16 flex flex-col items-center self-end py-8 text-center space-y-6 font-normal right-0 bg-white sm:w-full mx-auto top-20 ">
+            <div class="flex justify-start items-center w-full h-1/2 px-12 outline-none">
+                <input type="text" placeholder="ძებნა..." id="input-itself"
+                class="pl-2 h-8 border p-3 outline-none block w-1/2 rounded-xl focus:border-blue-700 ease-in-out focus:ease-in-out focus:transition-all focus:duration-500 transition-all duration-500">
+            </div>
+        </div>
+
+
+        <!-- Pages and Menu -->
 
             <div class="hidden items-center justify-between space-x-8 lg:flex">
                 <div class="hidden space-x-6 lg:flex text-titleColor">
                     <a href="#" class="page-link active hover:text-activeColor">მთავარი</a>
                     <a href="#" class="page-link hover:text-activeColor">კატეგორიები</a>
-                    <a href="#" class="page-link hover:text-activeColor" id="pagesButton">გვერდები &darr;</a>
+                    <a href="#" class="flex items-center page-link hover:text-activeColor" id="pagesButton">გვერდები <span class="material-symbols-outlined">
+                        keyboard_arrow_down
+                        </span></a>
                 </div>
 
                 <div id="pagesMenu"
-                    class="hidden gap-0 absolute w-64 h-auto py-2 px-7 bg-white text-sm font-semibold top-24 right-56 flex flex-col space-y-6 items-start justify-center text-titleColor drop-shadow-md">
+                    class="origin-top scale-0 duration-300 transition-all gap-0 absolute w-64 h-auto py-2 px-7 bg-white text-sm ease-in-out font-semibold top-24 right-72 flex flex-col space-y-6 items-start justify-center text-titleColor drop-shadow-md">
                     <div class="border-b border-gray-200 py-2 w-full hover:text-activeColor">
                         <a href="#">ჩვენს შესახებ</a>
                     </div>
@@ -76,9 +95,9 @@
                     <span class="hamburger-btm"></span>
                 </button>
                 <!--Menu-->
-                <div class="lg:hidden">
+                
                     <div id="burgerMenu"
-                        class="absolute h-95 flex flex-col items-center self-end hidden py-8 mt-10 text-center space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
+                        class="origin-top scale-0 duration-300 absolute h-95 flex flex-col items-center self-end py-8 mt-10 text-center space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 top-16 drop-shadow-md">
                         <a href="#"
                             class="page-link active border-b-2 border-violet-700 hover:text-activeColor hover:duration-250 duration-250 border-solid">მთავარი</a>
                         <a href="#"
@@ -92,7 +111,6 @@
                                 class="px-7 py-4 text-lg bg-buttonColor hover:bg-white hover:text-buttonColor border-buttonColor border-solid border duration-250 hover:duration-250 hover:transition-all text-white">შესვლა</a>
                         </div>
                     </div>
-                </div>
             </div>
         </nav>
     </header>
