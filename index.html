@@ -71,7 +71,7 @@
               type="text"
               placeholder="ძებნა..."
               id="input-itself"
-              class="pl-2 h-8 border p-3 outline-none block w-1/2 rounded-xl focus:border-blue-700 ease-in-out focus:ease-in-out focus:transition-all focus:duration-500 transition-all duration-500"
+              class="pl-2 h-8 border p-3 outline-none block w-1/2 rounded-xl ease-in-out focus:ease-in-out focus:transition-all focus:duration-500 focus:bg-white focus:outline-none focus:border-inputColor transition-all duration-500"
             />
           </div>
         </div>
@@ -97,7 +97,7 @@
 
           <div
             id="pagesMenu"
-            class="origin-top scale-0 duration-300 transition-all gap-0 absolute w-64 h-auto py-2 px-7 bg-white text-sm ease-in-out font-semibold top-24 right-72 flex flex-col space-y-6 items-start justify-center text-titleColor drop-shadow-md"
+            class="origin-top z-50 scale-0 duration-300 transition-all gap-0 absolute w-64 h-auto py-2 px-7 bg-white text-sm ease-in-out font-semibold top-24 right-72 flex flex-col space-y-6 items-start justify-center text-titleColor drop-shadow-md"
           >
             <div
               class="border-b border-gray-200 py-2 w-full hover:text-activeColor"
@@ -122,12 +122,12 @@
           <div class="hidden justify-between space-x-6 lg:flex">
             <a
               href="#"
-              class="px-7 py-4 text-lg bg-buttonColor hover:bg-white hover:text-buttonColor border-buttonColor border-solid border duration-250 hover:duration-250 hover:transition-all text-white"
+              class="button-transition relative z-10 overflow-hidden px-7 py-4 text-lg bg-buttonColor border-buttonColor border-solid border duration-250 hover:duration-250 hover:transition-all text-white"
               >რეგისტრაცია</a
             >
             <a
               href="#"
-              class="px-7 py-4 text-lg bg-buttonColor hover:bg-white hover:text-buttonColor border-buttonColor border-solid border duration-250 hover:duration-250 hover:transition-all text-white"
+              class="button-transition relative z-10 overflow-hidden px-7 py-4 text-lg bg-buttonColor border-buttonColor border-solid border duration-250 hover:duration-250 hover:transition-all text-white"
               >შესვლა</a
             >
           </div>
@@ -147,7 +147,7 @@
 
           <div
             id="burgerMenu"
-            class="origin-top scale-0 duration-300 absolute h-95 flex flex-col items-center self-end py-8 mt-10 text-center space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 top-16 drop-shadow-md"
+            class="origin-top z-50 scale-0 duration-300 absolute h-95 flex flex-col items-center self-end py-8 mt-10 text-center space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 top-16 drop-shadow-md"
           >
             <a
               href="#"
@@ -169,12 +169,12 @@
             >
               <a
                 href="#"
-                class="px-7 py-4 text-lg bg-buttonColor hover:bg-white hover:text-buttonColor border-buttonColor border-solid border duration-250 hover:duration-250 hover:transition-all text-white"
+                class="button-transition relative z-10 overflow-hidden px-7 py-4 text-lg bg-buttonColor border-buttonColor border-solid border duration-250 hover:duration-250 hover:transition-all text-white"
                 >რეგისტრაცია</a
               >
               <a
                 href="#"
-                class="px-7 py-4 text-lg bg-buttonColor hover:bg-white hover:text-buttonColor border-buttonColor border-solid border duration-250 hover:duration-250 hover:transition-all text-white"
+                class="button-transition relative z-10 overflow-hidden px-7 py-4 text-lg bg-buttonColor border-buttonColor border-solid border duration-250 hover:duration-250 hover:transition-all text-white"
                 >შესვლა</a
               >
             </div>
@@ -258,7 +258,7 @@
           <div class="w-full h-16">
             <div class="w-full h-full flex justify-center items-start">
               <button
-                class="w-full h-14 bg-buttonColor hover:bg-white hover:text-buttonColor border-buttonColor border-solid border duration-250 hover:duration-250 hover:transition-all text-white font-medium"
+                class="button-transition relative z-20 w-full h-14 overflow-hidden bg-buttonColor border-buttonColor border-solid border duration-900 hover:duration-900 hover:transition-all text-white font-medium"
               >
                 ძებნა
               </button>
@@ -291,7 +291,7 @@
           >
             <div class="w-11/12 sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 h-64 px-4">
               <div
-                class="p-12 flex gap-y-5 flex-col text-xl text-center font-bold text-titleColor hover:text-white justify-center items-center bg-categoriesColor hover:bg-activeColor rounded-2xl w-full h-full duration-200 hover:duration-200 cursor-pointer transition-all hover:transition-all"
+                class="categories-transition overflow-hidden hover:text-white z-30 relative p-12 flex gap-y-5 flex-col text-xl text-center font-bold text-titleColor justify-center items-center bg-categoriesColor rounded-2xl w-full h-full duration-700 cursor-pointer transition-all"
               >
                 <a href="#">სკოლა</a>
                 <div class="h-20 w-20 flex items-center justify-center">
@@ -308,7 +308,7 @@
             </div>
             <div class="w-11/12 sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 h-64 px-4">
               <div
-                class="p-12 flex gap-y-5 flex-col text-xl text-center font-bold text-titleColor hover:text-white justify-center items-center bg-categoriesColor hover:bg-activeColor rounded-2xl w-full h-full duration-200 hover:duration-200 cursor-pointer transition-all hover:transition-all"
+                class="categories-transition overflow-hidden hover:text-white z-30 relative p-12 flex gap-y-5 flex-col text-xl text-center font-bold text-titleColor justify-center items-center bg-categoriesColor rounded-2xl w-full h-full duration-700 cursor-pointer transition-all"
               >
                 <a href="#">ფსიქოლოგი</a>
                 <div class="h-20 w-20 flex items-center justify-center">
@@ -325,7 +325,7 @@
             </div>
             <div class="px-4 w-11/12 sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 h-64">
               <div
-                class="p-12 flex gap-y-5 flex-col text-xl text-center font-bold text-titleColor hover:text-white justify-center items-center bg-categoriesColor hover:bg-activeColor rounded-2xl w-full h-full duration-200 hover:duration-200 cursor-pointer transition-all hover:transition-all"
+                class="categories-transition overflow-hidden hover:text-white z-30 relative p-12 flex gap-y-5 flex-col text-xl text-center font-bold text-titleColor justify-center items-center bg-categoriesColor rounded-2xl w-full h-full duration-700 cursor-pointer transition-all"
               >
                 <a href="#">ქოუჩი</a>
                 <div class="h-20 w-20 flex items-center justify-center">
@@ -342,7 +342,7 @@
             </div>
             <div class="px-4 w-11/12 sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 h-64">
               <div
-                class="p-12 flex gap-y-5 flex-col text-xl text-center font-bold text-titleColor hover:text-white justify-center items-center bg-categoriesColor hover:bg-activeColor rounded-2xl w-full h-full duration-200 hover:duration-200 cursor-pointer transition-all hover:transition-all"
+                class="categories-transition overflow-hidden hover:text-white z-30 relative p-12 flex gap-y-5 flex-col text-xl text-center font-bold text-titleColor justify-center items-center bg-categoriesColor rounded-2xl w-full h-full duration-700 cursor-pointer transition-all"
               >
                 <a href="#">იურისტი</a>
                 <div class="h-20 w-20 flex items-center justify-center">
@@ -359,7 +359,7 @@
             </div>
             <div class="px-4 w-11/12 sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 h-64">
               <div
-                class="p-12 pt-6 flex gap-y-5 flex-col text-xl text-center font-bold text-titleColor hover:text-white justify-center items-center bg-categoriesColor hover:bg-activeColor rounded-2xl w-full h-full duration-200 hover:duration-200 cursor-pointer transition-all hover:transition-all"
+                class="categories-transition overflow-hidden hover:text-white z-30 relative p-12 pt-6 flex gap-y-5 flex-col text-xl text-center font-bold text-titleColor justify-center items-center bg-categoriesColor rounded-2xl w-full h-full duration-700 cursor-pointer transition-all"
               >
                 <a href="#">ბუღალტერია და გადასახადები</a>
                 <div class="h-20 w-20 flex items-center justify-center">
@@ -376,7 +376,7 @@
             </div>
             <div class="px-4 w-11/12 sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 h-64">
               <div
-                class="p-12 flex gap-y-5 flex-col text-xl text-center font-bold text-titleColor hover:text-white justify-center items-center bg-categoriesColor hover:bg-activeColor rounded-2xl w-full h-full duration-200 hover:duration-200 cursor-pointer transition-all hover:transition-all"
+                class="categories-transition overflow-hidden hover:text-white z-30 relative p-12 flex gap-y-5 flex-col text-xl text-center font-bold text-titleColor justify-center items-center bg-categoriesColor rounded-2xl w-full h-full duration-700 cursor-pointer transition-all"
               >
                 <a href="#">უცხო ენა</a>
                 <div class="h-20 w-20 flex items-center justify-center">
@@ -408,7 +408,7 @@
               ყველაზე მოთხოვნადი სკოლის საგნები
             </h2>
             <button
-              class="bg-buttonColor hover:bg-white hover:text-buttonColor border-buttonColor border-solid border font-medium duration-250 hover:duration-250 hover:transition-all text-white px-7 py-5"
+              class="button-transition relative z-30 overflow-hidden bg-buttonColor border-buttonColor border-solid border font-medium duration-250 hover:duration-250 hover:transition-all text-white px-7 py-5"
             >
               ყველას ნახვა
             </button>
@@ -1310,7 +1310,7 @@
               ყველაზე მოთხოვნადი ZOOM ჩართვები
             </h2>
             <button
-              class="bg-buttonColor hover:bg-white hover:text-buttonColor border-buttonColor border-solid border font-medium duration-250 hover:duration-250 hover:transition-all text-white px-7 py-5"
+              class="button-transition relative z-30 overflow-hidden bg-buttonColor border-buttonColor border-solid border font-medium duration-250 hover:duration-250 hover:transition-all text-white px-7 py-5"
             >
               ყველას ნახვა
             </button>
@@ -2211,7 +2211,7 @@
               დაუკავშიდით პროფესიონალებს
             </h2>
             <button
-              class="bg-buttonColor hover:bg-white hover:text-buttonColor border-buttonColor border-solid border font-medium duration-250 hover:duration-250 hover:transition-all text-white px-7 py-5"
+              class="button-transition relative z-30 bg-buttonColor overflow-hidden border-buttonColor border-solid border font-medium duration-250 hover:duration-250 hover:transition-all text-white px-7 py-5"
             >
               ყველას ნახვა
             </button>
@@ -2452,12 +2452,12 @@
 
       <!-- Lower Footer -->
       <div
-        class="h-14 w-full border-t border-t-borderColor flex justify-center items-center"
+        class="h-auto w-full py-4 border-t border-t-borderColor flex justify-center items-center"
       >
         <p
-          class="text-lg font-medium mx-auto sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl"
+          class="text-center px-12 text-lg font-medium mx-auto sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl"
         >
-          &copy; 2023 copied with <i class="fa fa-heart"></i> by Zura
+          &copy; 2023 copied with <i class="fa fa-heart"></i> by Zura from <a href="https://zoomit.ge/" class="font-bold">zoomit.ge</a>
         </p>
       </div>
     </footer>

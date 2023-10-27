@@ -103,8 +103,52 @@ body {
 
 #input-itself:focus {
   color: #212529;
-  background-color: #fff;
-  border-color: #86b7fe;
   box-shadow: 0 0 0 0.25rem #0d6efd40;
-  outline: none;
+}
+
+
+.categories-transition::before{
+    content:'';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #8000a3;
+    border-radius: 1rem;
+    z-index: -1;
+    opacity: .2;
+    overflow: hidden;
+    transition: all .3s ease-in;
+    transition-duration: .6s;
+    
+}
+
+.categories-transition:hover::before{
+  width: 100%;
+  opacity: 1;
+}
+
+.button-transition::before{
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 550px;
+  height: 550px;
+  margin: auto;
+  background: #21225f;
+  border-radius: 50%;
+  z-index: -1;
+  transform-origin: top center;
+  transform: translate(-50%) translateY(-5%) scale(.4);
+  transition: transform .9s;
+}
+
+.button-transition:hover::before{
+  transform-origin: bottom center;
+  transform: translate(-50%) translateY(-5%) scale(1);
 }

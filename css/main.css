@@ -610,6 +610,22 @@ video {
   top: 6rem;
 }
 
+.z-30 {
+  z-index: 30;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.z-20 {
+  z-index: 20;
+}
+
+.z-50 {
+  z-index: 50;
+}
+
 .mx-9 {
   margin-left: 2.25rem;
   margin-right: 2.25rem;
@@ -703,6 +719,10 @@ video {
 
 .origin-top {
   transform-origin: top;
+}
+
+.origin-center {
+  transform-origin: center;
 }
 
 .scale-0 {
@@ -1069,6 +1089,21 @@ video {
   padding-bottom: 2rem;
 }
 
+.py-14 {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 .pb-12 {
   padding-bottom: 3rem;
 }
@@ -1216,10 +1251,6 @@ video {
   transition-duration: 150ms;
 }
 
-.duration-200 {
-  transition-duration: 200ms;
-}
-
 .duration-300 {
   transition-duration: 300ms;
 }
@@ -1333,15 +1364,55 @@ body {
   transform: translate(-20px, 8px)
 }
 
-#input-itself:focus{
+#input-itself:focus {
   color: #212529;
-  background-color: #fff;
-  border-color: #86b7fe;
-  outline: none;
   box-shadow: 0 0 0 0.25rem #0d6efd40;
 }
 
-#input-itself:focus;
+.categories-transition::before{
+  content:'';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #8000a3;
+  border-radius: 1rem;
+  z-index: -1;
+  opacity: .2;
+  overflow: hidden;
+  transition: all .3s ease-in;
+  transition-duration: .6s;
+}
+
+.categories-transition:hover::before{
+  width: 100%;
+  opacity: 1;
+}
+
+.button-transition::before{
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 550px;
+  height: 550px;
+  margin: auto;
+  background: #21225f;
+  border-radius: 50%;
+  z-index: -1;
+  transform-origin: top center;
+  transform: translate(-50%) translateY(-5%) scale(.4);
+  transition: transform .9s;
+}
+
+.button-transition:hover::before{
+  transform-origin: bottom center;
+  transform: translate(-50%) translateY(-5%) scale(1);
+}
 
 .hover\:-translate-y-3:hover {
   --tw-translate-y: -0.75rem;
@@ -1383,10 +1454,6 @@ body {
   transition-duration: 150ms;
 }
 
-.hover\:duration-200:hover {
-  transition-duration: 200ms;
-}
-
 .hover\:duration-500:hover {
   transition-duration: 500ms;
 }
@@ -1395,9 +1462,14 @@ body {
   transition-duration: 700ms;
 }
 
-.focus\:border-blue-700:focus {
+.focus\:border-inputColor:focus {
   --tw-border-opacity: 1;
-  border-color: rgb(29 78 216 / var(--tw-border-opacity));
+  border-color: rgb(134 183 254 / var(--tw-border-opacity));
+}
+
+.focus\:bg-white:focus {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .focus\:outline-none:focus {

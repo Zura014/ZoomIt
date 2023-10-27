@@ -32,7 +32,8 @@ module.exports = {
         buttonColor: "#8000a3",
         subjectColor: "#08a9e61a",
         borderColor: "rgba(255, 255, 255, .1)",
-        messengerIconColor: "#0A7CFF"
+        messengerIconColor: "#0A7CFF",
+        inputColor: "#86b7fe"
       },
       fontFamily: {
         roboto: ["Noto Sans Georgian", "sans-serif"],
