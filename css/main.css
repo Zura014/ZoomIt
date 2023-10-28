@@ -594,8 +594,8 @@ video {
   right: 1.5rem;
 }
 
-.right-72 {
-  right: 18rem;
+.right-64 {
+  right: 16rem;
 }
 
 .top-16 {
@@ -606,12 +606,16 @@ video {
   top: 5rem;
 }
 
-.top-24 {
-  top: 6rem;
+.top-\[78px\] {
+  top: 78px;
 }
 
-.z-30 {
-  z-index: 30;
+.top-\[76px\] {
+  top: 76px;
+}
+
+.top-\[77px\] {
+  top: 77px;
 }
 
 .z-10 {
@@ -620,6 +624,10 @@ video {
 
 .z-20 {
   z-index: 20;
+}
+
+.z-30 {
+  z-index: 30;
 }
 
 .z-50 {
@@ -721,12 +729,18 @@ video {
   transform-origin: top;
 }
 
-.origin-center {
-  transform-origin: center;
-}
-
 .scale-0 {
   --tw-scale-x: 0;
+  --tw-scale-y: 0;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.scale-x-0 {
+  --tw-scale-x: 0;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.scale-y-0 {
   --tw-scale-y: 0;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -1074,6 +1088,11 @@ video {
   padding-bottom: 6rem;
 }
 
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -1089,19 +1108,34 @@ video {
   padding-bottom: 2rem;
 }
 
-.py-14 {
-  padding-top: 3.5rem;
-  padding-bottom: 3.5rem;
+.px-\[15px\] {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-.py-12 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+.px-\[35px\] {
+  padding-left: 35px;
+  padding-right: 35px;
 }
 
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+.py-\[15px\] {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.px-\[22px\] {
+  padding-left: 22px;
+  padding-right: 22px;
+}
+
+.py-\[11px\] {
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+
+.py-\[10px\] {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .pb-12 {
@@ -1428,19 +1462,9 @@ body {
   background-color: rgb(138 43 226 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-white:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
 .hover\:text-activeColor:hover {
   --tw-text-opacity: 1;
   color: rgb(138 43 226 / var(--tw-text-opacity));
-}
-
-.hover\:text-buttonColor:hover {
-  --tw-text-opacity: 1;
-  color: rgb(128 0 163 / var(--tw-text-opacity));
 }
 
 .hover\:text-white:hover {
@@ -1600,5 +1624,15 @@ body {
 
   .xl\:gap-0 {
     gap: 0px;
+  }
+
+  .xl\:px-\[35px\] {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  .xl\:py-\[15px\] {
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 }
