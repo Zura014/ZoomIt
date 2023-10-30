@@ -9,7 +9,16 @@ let pagesMenu = document.querySelector("#pagesMenu");
 
 let hoverBtn = document.querySelector("#hoverBtn");
 
-pagesButton.addEventListener("mouseover", function () {
+let inputPlaceholder = document.querySelector("#inputPlaceholder");
+let animTxt = document.querySelector("#animTxt");
+let selectTag = document.querySelector("#selectTag");
+
+
+selectTag.addEventListener("click", () => {
+    
+});
+
+pagesButton.addEventListener("mouseover", () => {
     pagesMenu.classList.add("scale-y-1");
     pagesMenu.classList.remove("scale-y-0");
     if (pagesMenu.classList.contains("scale-y-1")) {
@@ -19,7 +28,7 @@ pagesButton.addEventListener("mouseover", function () {
     }
 });
 
-pagesButton.addEventListener("mouseout", function () {
+pagesButton.addEventListener("mouseout", () => {
     pagesMenu.classList.remove("scale-y-1");
     pagesMenu.classList.add("scale-y-0");
     if (pagesMenu.classList.contains("scale-y-1")) {
@@ -31,8 +40,14 @@ pagesButton.addEventListener("mouseout", function () {
 
 searchMenuButton.addEventListener("click", () => {
     searchMenuButton.classList.toggle("open");
-    searchMenu.classList.toggle("scale-y-1");
-    searchMenu.classList.toggle("scale-y-0");
+    searchMenu.classList.toggle("-translate-y-52");
+    if(searchMenu.classList.contains("-translate-y-52")){
+        searchMenu.classList.add("-z-10");
+    }else{
+        setTimeout(() => {
+            searchMenu.classList.remove("-z-10");            
+        }, 500);
+    }
 });
 
 burgerMenuButton.addEventListener("click", () => {

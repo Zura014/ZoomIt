@@ -33,7 +33,7 @@
     <header
       class="relative container mx-auto py-3 px-6 lg:py-3 bg-white lg:bg-transparent w-full"
     >
-      <nav class="flex items-center justify-between w-full">
+      <nav class="flex items-center justify-between w-full z-50">
         <!-- Image and Input -->
         <div class="flex justify-between items-center space-x-12">
           <a href="">
@@ -62,7 +62,7 @@
         <!-- Search Menu -->
         <div
           id="searchMenu"
-          class="origin-top scale-y-0 duration-500 absolute outline-none w-full h-16 flex flex-col items-center self-end py-8 text-center space-y-6 font-normal right-0 bg-white sm:w-full mx-auto top-20"
+          class="origin-top -z-10 -translate-y-52 duration-500 absolute outline-none w-full h-16 flex flex-col items-center self-end py-8 text-center space-y-6 font-normal right-0 bg-white sm:w-full mx-auto top-20"
         >
           <div
             class="flex justify-start items-center w-full h-1/2 px-12 outline-none"
@@ -80,14 +80,14 @@
 
         <div class="hidden items-center justify-between space-x-8 lg:flex">
           <div class="hidden space-x-6 lg:flex text-titleColor">
-            <a href="#" class="py-5 page-link text-buttonColor duration-500 active hover:text-activeColor"
+            <a href="#" class="py-5 page-link duration-500 active hover:text-activeColor"
               >მთავარი</a
             >
-            <a href="#" class="page-link py-5 text-buttonColor duration-500 hover:text-activeColor"
+            <a href="#" class="page-link py-5 text-black duration-500 hover:text-buttonColor"
               >კატეგორიები</a
             >
             <div id="pagesButton" class="py-5">
-              <a href="#" class="flex items-center page-link  text-buttonColor duration-500" id="hoverBtn"
+              <a href="#" class="flex items-center page-link duration-500" id="hoverBtn"
                 >გვერდები
                 <span class="material-symbols-outlined">
                   keyboard_arrow_down
@@ -191,11 +191,16 @@
         <div
           class="grid justify-items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 px-auto gap-6"
         >
-          <div class="w-full h-16 flex justify-center items-center">
+          <div class="w-full h-16 flex justify-center relative items-center">
+            <div id="animTxt" class="absolute left-4 duration-200 bg-bodyColor text-xl ease-in-out text-[#636264]">
+              <p></p>
+            </div>
             <select
-              class="w-full h-full border-gray-500 rounded border-solid outline-none border text-xl px-2 text-gray-500 bg-transparent"
+              required
+              id="selectTag"
+              class="duration-300 z-20 w-full h-full appearance-none border-gray-500 rounded border-solid outline-none border text-xl px-4 text-gray-500 bg-transparent"
             >
-              <option value="0" disabled selected hidden>
+              <option value="0" disabled selected hidden id="inputPlaceholder">
                 მომსახურების ტიპი
               </option>
               <option value="school">სკოლა</option>
@@ -203,22 +208,42 @@
             </select>
           </div>
           <div class="w-full h-16">
-            <div class="w-full h-full flex justify-center items-center">
+            <div class="w-full h-full flex justify-center items-center relative">
+              <div id="animTxt" class="absolute left-4 duration-200 bg-bodyColor text-xl ease-in-out text-[#636264]">
+                <p>აირჩიე კატეგორია</p>
+              </div>
               <select
-                class="w-full h-full border-gray-500 rounded border-solid outline-none border text-xl px-2 bg-transparent text-gray-500"
-              >
-                <option value="0" disabled selected hidden>
-                  აირჩიე კატეგორია
+              id="selectTag"
+              class="duration-300 z-20 w-full h-full appearance-none border-gray-500 rounded border-solid outline-none border text-xl px-4 text-gray-500 bg-transparent"
+            >
+                <option value="0" disabled selected hidden id="inputPlaceholder">
                 </option>
-                <option value="fiveToTwelveClass">V-XII კლასი</option>
-                <option value="oneToFourClass">I-IV კლასი</option>
+                <optgroup label="V-XII კლასი" value="fiveToTwelveClass">
+                  <option value="">მათემატიკა</option>
+                  <option value="">ფიზიკა</option>
+                  <option value="">ისტორია</option>
+                  <option value="">ქიმია</option>
+                  <option value="">ინგლისური</option>
+                  <option value="">გეოგრაფია</option>
+                  <option value="">მოქალაქეობა</option>
+                  <option value="">ქართული</option>
+                  <option value="">გერმანული</option>
+                  <option value="">ესპანური</option>
+                  <option value="">რუსული</option>
+                  <option value="">ინფორმატიკა</option>
+                  <option value="">ბიოლოგია</option>
+                  <option value="">მუსიკა</option>
+                  <option value="">ხელოვნება</option>
+                </optgroup>
+                  <option value="">დაწყებითი</option>
+                <optgroup label="I-IV კლასი" value="oneToFourClass"></optgroup>
               </select>
             </div>
           </div>
           <div class="w-full h-16">
             <div class="w-full h-16 flex justify-center items-center">
               <select
-                class="w-full h-full border-gray-500 rounded border-solid outline-none border text-xl px-2 text-gray-500 bg-transparent"
+                class="w-full h-full appearance-none border-gray-500 rounded border-solid outline-none border text-xl px-2 text-gray-500 bg-transparent"
               >
                 <option value="0" disabled selected hidden>რეიტინგი</option>
                 <option value="rateing">რეიტინგი</option>
@@ -231,7 +256,7 @@
               <div class="w-full h-16 flex justify-center items-center">
                 <input
                   type="number"
-                  class="w-full h-full border-gray-500 rounded border-solid outline-none border text-lg px-4 text-gray-500 bg-transparent"
+                  class="w-full h-full border-gray-500 rounded border-solid outline-none border text-lg px-4 placeholder:text-gray-500 text-gray-500 bg-transparent"
                   placeholder="5₾-დან"
                 />
               </div>
@@ -240,7 +265,7 @@
               <div class="w-full h-16 flex justify-center items-center">
                 <input
                   type="number"
-                  class="w-full h-full border-gray-500 rounded border-solid outline-none border text-lg px-4 text-gray-500 bg-transparent"
+                  class="w-full h-full border-gray-500 rounded border-solid outline-none border text-lg px-4 placeholder:text-gray-500 text-gray-500 bg-transparent"
                   placeholder="500₾-მდე"
                 />
               </div>
