@@ -1,1 +1,162 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wdth@62.5;100&display=swap');
+
+body {
+  height: 200vh;
+  width: 100%;
+  font-family: 'Noto Sans Georgian', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 0.75vw;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(138, 43, 226, 0.2);
+  border-radius: 10px;
+}
+
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.hamburger-top,
+.hamburger-mid,
+.hamburger-btm {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: #000;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger-mid {
+  transform: translateY(7px);
+}
+
+.hamburger-btm {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translate(6px);
+}
+
+.open .hamburger-mid {
+  display: none;
+}
+
+.open .hamburger-btm {
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
+
+.active {
+  color: #8000a3;
+}
+
+.footer-widget::before {
+  content: '';
+  background: #8000a3;
+  display: block;
+  height: 3px;
+  width: 35px;
+  transform: translateY(38px);
+  z-index: -1;
+}
+
+.footer-widget::after {
+  content: '';
+  background: #FFFFFF;
+  display: block;
+  height: 3px;
+  width: 35px;
+  z-index: 1;
+  opacity: .2;
+  position: absolute;
+  transform: translate(35px, 7px);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.li-widgets::before {
+  content: '';
+  background: #8000a3;
+  display: block;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  transform: translate(-20px, 8px)
+}
+
+#input-itself:focus {
+  color: #212529;
+  box-shadow: 0 0 0 0.25rem #0d6efd40;
+}
+
+
+.categories-transition::before{
+    content:'';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #8000a3;
+    border-radius: 1rem;
+    z-index: -1;
+    opacity: .2;
+    overflow: hidden;
+    transition: all .3s ease-in;
+    transition-duration: .6s;
+    
+}
+
+.categories-transition:hover::before{
+  width: 100%;
+  opacity: 1;
+}
+
+.button-transition::before{
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 550px;
+  height: 550px;
+  margin: auto;
+  background: #21225f;
+  border-radius: 50%;
+  z-index: -1;
+  transform-origin: top center;
+  transform: translate(-50%) translateY(-5%) scale(.4);
+  transition: transform .9s;
+}
+
+.button-transition:hover::before{
+  transform-origin: bottom center;
+  transform: translate(-50%) translateY(-5%) scale(1);
+}
