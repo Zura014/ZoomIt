@@ -1,0 +1,55 @@
+<div class="w-full h-505 hover:-translate-y-3 hover:duration-700 duration-700">
+  <div class="h-3/5">
+    <a href="#">
+      <img [src]="cardData.mainImageUrl" class="w-full h-full object-cover" />
+    </a>
+  </div>
+  <div class="h-2/5 w-full flex flex-col bg-white p-2.5">
+    <div class="text-sm py-2.5 flex space-x-3">
+      <a
+        *ngFor="let subject of cardData.subjects"
+        href="#"
+        class="text-buttonColor bg-subjectColor border border-subjectColor hover:border-subjectColor hover:text-white hover:bg-activeColor px-2.5 py-1 duration-500 hover:duration-500"
+      >
+        {{ subject }}
+      </a>
+    </div>
+    <div class="text-sm text-titleColor hover:text-buttonColor font-bold">
+      <a href="#">{{ cardData.title }}</a>
+    </div>
+    <div class="py-2.5 flex justify-between items-center border-b pb-3">
+      <div
+        *ngFor="let session of cardData.sessions"
+        class="flex items-center space-x-2"
+      >
+        <span class="material-symbols-outlined text-buttonColor">schedule</span>
+        <label class="text-[12px] text-gray-600"
+          >{{ session.duration }} წთ</label
+        >
+        <label class="text-[12px] text-buttonColor font-semibold"
+          >{{ session.price }}₾</label
+        >
+      </div>
+    </div>
+    <div class="py-2.5 flex items-center justify-between">
+      <div class="flex items-center space-x-2">
+        <div class="w-10 h-10">
+          <a href="#">
+            <img
+              [src]="cardData.tutor.profileImageUrl"
+              class="border-violet-500 border rounded-full w-full h-full object-cover"
+            />
+          </a>
+        </div>
+        <label class="text-[12px] text-buttonColor font-semibold">{{
+          cardData.tutor.name
+        }}</label>
+      </div>
+      <div class="flex items-center space-x-1">
+        <span class="material-symbols-outlined text-orange-400">star</span>
+        <label>{{ cardData.rating.average }}</label>
+        <label>({{ cardData.rating.reviewsCount }})</label>
+      </div>
+    </div>
+  </div>
+</div>
